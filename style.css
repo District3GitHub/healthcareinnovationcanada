@@ -1,0 +1,145 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url("assets/fonts/source-sans-pro/woff/SourceSansPro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  font-weight: bold;
+  src: url("assets/fonts/source-sans-pro/woff/SourceSansPro-Black.woff2") format("woff2");
+  /* src: url("assets/fonts/source-sans-pro/SourceSansPro-Black.otf") format("opentype"); */
+}
+
+html {
+  font-family: SourceSansPro, Helvetica, sans-serif;
+  font-size: 21px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('/assets/img/rsz_unicornvectorgradient_21.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.container {
+  max-width: 1366px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.hero-text {
+  margin-top: 200px;
+  font-size: 4.5rem;
+  width: 80%;
+}
+
+.canadian-leaf {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 40%;
+  transform: translate(0%, -50%);
+  z-index: -1;
+}
+
+.lead {
+  margin-top: 300px;
+  width: 60%;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.accelerator-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.accelerator-card{
+ flex-basis: 30%;
+}
+
+.accelerator-card p{
+ font-size: 18px;
+}
+
+.accelerator-card .logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+@media only screen and (max-width: 1366px){
+  .hero-text {
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .container {
+    margin: 0 20px;
+  }
+
+  .canadian-leaf {
+    width: 60%;
+    opacity: 0.5;
+  }
+
+  .lead {
+    margin-top: 0px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .accelerator-section {
+    display: block;
+  }
+
+  .accelerator-card{
+    width: 100%;
+    display: flex;
+    margin: 0px 0px;
+    margin-bottom: 100px;
+  }
+
+  .accelerator-card .logo-wrapper {
+    width: 300px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .canadian-leaf {
+    top: 300px;
+    width: 100%;
+  }
+
+  .accelerator-card{
+    width: 100%;
+    display: block;
+  }
+
+  .accelerator-card .logo-wrapper {
+    width: auto;
+    height: 200px;
+  }
+}
