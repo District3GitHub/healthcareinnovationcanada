@@ -67,6 +67,9 @@ h2 {
 
 .accelerator-card{
  flex-basis: 30%;
+ /* padding: 20px 0px;
+ border-top: 4px solid black;
+ border-bottom: 4px solid black; */
 }
 
 .accelerator-card p{
