@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-image: url('assets/img/rsz_unicornvectorgradient_21.png');
+  background-image: url('./assets/img/rsz_unicornvectorgradient_21.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
