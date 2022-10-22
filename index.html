@@ -11,19 +11,21 @@
 
 <body>
     <nav style="position: fixed; top: 0%; width: 100%;">
-        <div style="max-width: 1366px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-        <img src="assets/img/logo-nosupp.svg" alt="Healthcare innovation from canada logo" height="100px"
-        style="margin-top: 20px;">
-        <div class="menu" id="main-menu">
-            <a class="menu-item active" href="#hero">Home</a>
-            <a class="menu-item" href="#section-1">Meet the accelerators</a>
-            <a class="menu-item" href="#section-2">Meet the startups</a>
-            <a class="menu-item" href="#section-3">Meet the team</a>
-        </div>
+        <div style="max-width: 1366px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center;">
+            <div class="menu" id="main-menu">
+                <!-- <a class="menu-item active" href="#hero">Home</a> -->
+                <a class="menu-item" href="#section-1">Meet the accelerators</a>
+                <a class="menu-item" href="#section-2">Meet the startups</a>
+                <a class="menu-item" href="#section-3">Meet the team</a>
+            </div>
         </div>
     </nav>
-    <div class="container" style="padding-top: 100px;">
-        <section class="scrollspy" id="hero">
+    <div class="container">
+        <section>
+            <img src="assets/img/logo-nosupp.svg" alt="Healthcare innovation from canada logo" height="100px"
+                style="margin-top: 20px;">
+        </section>
+        <section>
             <div class="canadian-leaf">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5833.05 6469.88">
                     <defs>
@@ -94,14 +96,12 @@
                 </svg>
             </div>
             <h1 class="hero-text"> Known for its thriving AI centers, Canada is also home to some of the most promising
-                healthtech.</h1>
-        </section>
-        <section class="lead">
-            <p>Healthcare Innovation from Canada (HIC) is powered by three Canadian health technology accelerators: CTS
-                (Health Technology Catalyst), District 3 and MaRS Discovery District, with over 300+ health technology
+                healthtech startups.</h1>
+            <p class="lead">Healthcare Innovation from Canada is powered by three Canadian health technology
+                accelerators: CTS (Health Technology Catalyst), District 3 and MaRS Discovery District, with over 300+ health technology
                 startups.
 
-                The HIC consortium helps startups grow their business, raise capital and generate customer connections.
+                The Healthcare Innovation from Canada consortium helps startups grow their business, raise capital and generate customer connections.
                 Connect with us to meet top Canadian startups in digital health and MedTech!
             </p>
         </section>
@@ -118,15 +118,16 @@
                     </div>
                     <div>
                         <h3>Health Technology Catalyst</h3>
-                        <p>Specialized in innovative healthcare technology and digital health solutions, CTS is an à la
-                            carte growth accelerator who responds to the particular challenges and needs of each
-                            startup. With
-                            CTS behind you, you’ll get strategic coaching to secure financing, effective
-                            commercialization tools
-                            that will help you succeed across Canada and internationally, and an introduction to our
-                            dynamic
-                            ecosystem of key medical and business players.</p>
-                        <p><a href="https://ctssante.com/en/">Learn More &rarr;</a></p>
+                        <p>CTS is a renowned healthtech accelerator, funded in 2008. As a not-for-profit organization,
+                            it relies on an ecosystem of partners and a global network of entrepreneurs, scientists,
+                            investors, tech and life sciences executives to achieve its mission: “Catalyze the growth of
+                            emerging health tech companies by providing bespoke acceleration services at the critical
+                            steps of early-stage commercialization and financing for the medtech and digital health
+                            sectors”.</p>
+                        <div class="accelerator-links">
+                            <a href="https://ctssante.com/en/"><button>Portfolio</button></a>
+                            <p><a href="https://ctssante.com/en/">Learn More &rarr;</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="accelerator-card">
@@ -145,7 +146,10 @@
                             rigorous training. We bridge the knowledge, skills and resource gap between building a
                             product and
                             building a company.</p>
-                        <p><a href="https://district3.co/">Learn More &rarr;</a></p>
+                        <div class="accelerator-links">
+                            <a href="https://district3.co/"><button>Portfolio</button></a>
+                            <p><a href="https://district3.co/">Learn More &rarr;</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="accelerator-card">
@@ -158,22 +162,25 @@
                     </div>
                     <div>
                         <h3>MaRS</h3>
-                        <p>MaRS brings together the innovation community to grow the economy and make an impact. From
-                            advisory services to connections to talent, capital, customers and more, MaRS offers a range
-                            of
-                            high-value services that help high-growth companies succeed. We also provide access to the
-                            MaRS
-                            ecosystem, a curated community of entrepreneurs, investors, corporates, academics and
-                            government
-                            partners.</p>
-                        <p><a href="https://www.marsdd.com/">Learn More &rarr;</a></p>
+                        <p>MaRS is North America’s largest urban innovation hub. A registered non-profit, MaRS supports
+                            high-growth startups and scale-ups tackling key issues in health, cleantech, fintech and
+                            other sectors. In addition, MaRS convenes all members of the tech ecosystem to drive
+                            breakthrough discoveries, grow the economy and make an impact by solving real problems for
+                            real people — in Canada and around the world.</p>
+                        <div class="accelerator-links">
+                            <a href="https://www.marsdd.com/"><button>Portfolio</button></a>
+                            <p><a href="https://www.marsdd.com/">Learn More &rarr;</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="scrollspy" id="section-2">
-            <h2>Meet the startups</h2>
-            <iframe class="airtable-embed" src="https://airtable.com/embed/shrcqJsfAhpWgk7QL?backgroundColor=cyan&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <h2>Meet our startups presenting at HLTH</h2>
+            <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shrcqJsfAhpWgk7QL?backgroundColor=cyan&viewControls=on" frameborder="0"
+                onmousewheel="" width="100%" height="533"
+                style="background: transparent; border: 1px solid #ccc;"></iframe>
         </section>
         <section class="scrollspy" id="section-3">
             <h2>Meet the team</h2>
@@ -206,36 +213,49 @@
                     <h3>Pamela Champagne</h3>
                     <p>Venture Associate at District 3</p>
                 </div>
-
+                <div class="team-card">
+                    <a href="https://www.linkedin.com/in/samuel-m-ohayon-0b4a5484/">
+                        <img src="assets/img/team/samuel.jpg" alt="photo of Samuel">
+                    </a>
+                    <h3>Samuel M. Ohayon</h3>
+                    <p>Digital Health Expert | Entrepreneur in Residence at CTS</p>
+                </div>
+                <div class="team-card">
+                    <a href="https://www.linkedin.com/in/louisepichette/">
+                        <img src="assets/img/team/louise.jpg" alt="photo of Louise">
+                    </a>
+                    <h3>Louise Pichette</h3>
+                    <p>Senior Manager, Health Sciences at MaRS Discovery District</p>
+                </div>
             </div>
         </section>
     </div>
     <script async src="scrollspy.min.js"></script>
     <script defer>
-    window.onload = function () {
-        scrollSpy('#main-menu', {
-        sectionClass: '.scrollspy',
-        menuActiveTarget: '.menu-item',
-        offset: 100,
-        // scrollContainer: null,
-        // smooth scroll
-        smoothScroll: true,
-        smoothScrollBehavior: function(element) {
-            console.log('run "smoothScrollBehavior"...', element)
-            element.scrollIntoView({ behavior: 'smooth' })
-        }
-        })
+        window.onload = function () {
+            scrollSpy('#main-menu', {
+                sectionClass: '.scrollspy',
+                menuActiveTarget: '.menu-item',
+                offset: 100,
+                // scrollContainer: null,
+                // smooth scroll
+                smoothScroll: true,
+                smoothScrollBehavior: function (element) {
+                    console.log('run "smoothScrollBehavior"...', element)
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+            })
 
-        const nav = document.querySelector("nav");
+            // const nav = document.querySelector("nav");
 
-        window.onscroll = (event) => {
-        if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-            nav.style.backgroundColor = "white";
-        } else {
-            nav.style.backgroundColor = "#00000000";
+            // window.onscroll = (event) => {
+            // if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+            //     nav.style.backgroundColor = "white";
+            // } else {
+            //     nav.style.backgroundColor = "#00000000";
+            // }
+            // };
         }
-    };
-    }
     </script>
 </body>
 
