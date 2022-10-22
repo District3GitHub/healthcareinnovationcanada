@@ -24,18 +24,34 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  margin:0;
+  margin: 0;
   padding: 0;
 }
 
 nav {
   padding: 20px 0;
   transition: all 0.2s;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hamburger-button {
+  cursor: pointer;
 }
 
 .menu {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #fbe9f7;
+  border: 3px solid black;
   padding: 20px;
 }
 
@@ -96,30 +112,76 @@ h2 {
   gap: 30px;
 }
 
-.accelerator-card{
- flex-basis: 30%;
- background-color: #ffffff;
- padding: 20px;
- border: 1px solid #ccc;
+.accelerator-card {
+  flex-basis: 30%;
+}
+
+.accordion {
+  background-color: #00000000;
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
+  padding: 20px;
+  font-size: 21px;
+  font-weight: 900;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active-panel,
+.accordion:hover {
+  background-color: #00000011;
+}
+
+.active-panel {
+  border-bottom: 3px solid black;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active-panel:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
 }
 
 .accelerator-links {
-  display:flex;
+  display: flex;
+  align-items: center;
   gap: 20px;
+  border: 3px solid black;
 }
 
-.accelerator-links button{
+.accelerator-links button {
   background-color: #c91f5a;
+  border: none;
+  border-right: 3px solid black;
   color: white;
   cursor: pointer;
   padding: 18px;
-  border: none;
   outline: none;
   font-size: 18px;
   transition: 0.4s;
 }
 
-.accelerator-links button:hover{
+.accelerator-links button:hover {
   background-color: #a51a4b;
 }
 
@@ -128,38 +190,66 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 200px;
-  padding-top: 20px;
+  padding: 20px;
+  border: 3px solid black;
 }
 
 .team-section {
   display: flex;
-  justify-content:space-around ;
+  justify-content: space-around;
   gap: 30px;
   flex-wrap: wrap;
 }
 
 .team-card {
   width: 300px;
-  border-bottom: 4px solid black;
+  border: 3px solid black;
   margin-bottom: 50px;
 }
 
-.team-card img {
+.team-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.team-portrait img {
   width: 300px;
-  border-bottom: 4px solid black;
+  border-bottom: 3px solid black;
 }
 
-.team-card h3 {
+.team-company,
+.team-linkedin {
+  position: absolute;
+  padding: 8px;
+}
+
+.team-company {
+  height: 25px;
+  bottom: 5px;
+  left: -3px;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.team-linkedin {
+  width: 25px;
+  bottom: 5px;
+  right: -3px;
+  border: 3px solid black;
+  background-color: #c91f5a;
+}
+
+.team-description {
+  padding: 20px
+}
+
+.team-description * {
   margin: 10px 0px;
 }
 
-.team-card p {
-  margin: 10px 0px;
-}
 
-
-
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 1366px) {
   .hero-text {
     font-size: 3rem;
     width: 100%;
@@ -178,17 +268,42 @@ h2 {
     display: block;
   }
 
-  .accelerator-card{
+  .accelerator-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 769px) {
+  .accelerator-card {
     display: flex;
-    margin: 0px 0px;
-    margin-bottom: 50px;
+    border: 3px solid black;
   }
 
   .accelerator-card .logo-wrapper {
     width: 300px;
-    height: 100%;
+    border: none;
+  }
+
+  .accordion {
+    border-right: none;
+  }
+
+  .accelerator-links {
+    display: flex;
+    gap: 20px;
+    border: none;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  .panel {
+    border-right: none;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   h2 {
@@ -215,7 +330,7 @@ h2 {
     width: 100%;
   }
 
-  .accelerator-card{
+  .accelerator-card {
     display: block;
   }
 
