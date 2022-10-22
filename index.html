@@ -12,16 +12,12 @@
 <body>
     <nav>
         <div class="menu-container">
-            <!-- <div class="hamburger-button">
-                <svg  class="hamburger" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="black" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="black" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-            </div> -->
+            <div class="hamburger-button" onclick="menuToggle(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <div class="menu" id="main-menu">
-                <!-- <a class="menu-item active" href="#hero">Home</a> -->
                 <a class="menu-item" href="#section-1">Meet the accelerators</a>
                 <a class="menu-item" href="#section-2">Meet the startups</a>
                 <a class="menu-item" href="#section-3">Meet the team</a>
@@ -30,7 +26,7 @@
     </nav>
     <div class="container">
         <section>
-            <img src="assets/img/logo-nosupp.svg" alt="Healthcare innovation from canada logo" height="100px"
+            <img src="assets/img/logo-nosupp.svg" alt="Healthcare innovation from canada logo" height="150px"
                 style="margin-top: 20px;">
         </section>
         <section>
@@ -317,16 +313,6 @@
                 }
             })
 
-            // const nav = document.querySelector("nav");
-
-            // window.onscroll = (event) => {
-            // if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-            //     nav.style.backgroundColor = "white";
-            // } else {
-            //     nav.style.backgroundColor = "#00000000";
-            // }
-            // };
-
             var acc = document.getElementsByClassName("accordion");
             var i;
 
@@ -340,6 +326,28 @@
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     }
                 });
+            }
+
+            window.addEventListener("resize", function() {
+                const menu = document.querySelector(".menu")
+
+                if (window.matchMedia("(min-width: 768px)").matches) {
+                    menu.style.display = "block"
+                    document.querySelector(".hamburger-button").classList.remove("change");
+                } else {
+                    menu.style.display = "none"
+                }
+            })
+        }
+
+        function menuToggle(x) {
+            x.classList.toggle("change");
+
+            const menu = document.querySelector(".menu")
+            if (menu.style.display === "block"){
+                menu.style.display = "none"
+            } else {
+                menu.style.display = "block"
             }
         }
     </script>
