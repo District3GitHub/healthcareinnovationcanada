@@ -369,6 +369,7 @@ h2 {
   .canadian-leaf {
     top: 300px;
     width: 100%;
+    opacity: 0.4;
   }
 
   .accelerator-card {
